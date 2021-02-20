@@ -6,7 +6,14 @@ shape* create_shape() {
   return nullptr;
 }
 
+/*
+  完成智能指针的最基本的功能：对超出作用域的对象进行释放,
 
+  缺点是
+  1. 这个类只适用于 shape 类
+  2. 该类对象的行为不够像指针
+  3. 拷贝该类对象会引发程序行为异常
+*/
 class shape_wrapper
 {
 public:
